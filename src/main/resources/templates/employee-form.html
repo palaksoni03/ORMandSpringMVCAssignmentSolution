@@ -9,18 +9,21 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-	<title>Save Employee</title>
+	<title>Save Customer</title>
 </head>
 
 <body>
 
 	<div class="container">
 		<br/>
-	
-		<h3>Student Directory</h3>
+		<div class="bg-success py-5">
+			<h3 class="text-center text-white">Customer Relationship Management</h3>
+		
+		</div>
+		
 		<hr>
 		
-		<p class="h4 mb-4">Save Student</p>
+		<p class="h4 mb-4">Save Customer</p>
 	
 		<form action="#" th:action="@{/save}"
 						 th:object="${students}" method="POST">
@@ -37,19 +40,12 @@
 			<input type="text" th:field="*{email}"
 					class="form-control mb-4 col-4" placeholder="Email">
 				
-					
-			<input type="text" th:field="*{department}"
-					class="form-control mb-4 col-4" placeholder = "Department" >
-					
-			<input type="text" th:field="*{country}"
-					class="form-control mb-4 col-4" placeholder = "Country" >
-				
 			<button type="submit" class="btn btn-info col-2">Save</button>
 						
 		</form>
 	
 		<hr>
-		<a th:href="@{/Student}">Back to Student List</a>
+		<a th:href="@{/customer}">Back to customer List</a>
 		
 	</div>
 </body>

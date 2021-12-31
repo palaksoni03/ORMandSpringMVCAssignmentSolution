@@ -26,7 +26,7 @@ public class StudentController {
 	}
 	
 	
-	@GetMapping("/Student")
+	@GetMapping("/customer")
 	public  String studentDetail(Model mnodel ) {
 		
       List<Student> studentList = service.getAllStudent();
@@ -73,22 +73,22 @@ public class StudentController {
 		service.deleteById(theId);
 		
 		// redirect to /employees/list
-		return "redirect:/Student";
+		return "redirect:/customer";
 		
 	}
 	
 	
 	@PostMapping("/updateVal")
 	public String updateValue(@RequestParam("firstName")String firstName, @RequestParam("lastName")String lastName, @RequestParam("email") String emil, 
-			 @RequestParam("id")int id , @RequestParam("department")String department,  @RequestParam("country")String country) {
+			 @RequestParam("id")int id) {
 		
-		Student student = new Student(firstName, lastName, emil, department, country);
+		Student student = new Student(firstName, lastName, emil);
 		student.setId(id);
 		
 		
 		service.updateCustomer(student);
 		
-		return "redirect:/Student";
+		return "redirect:/customer";
 	}
 	
 	

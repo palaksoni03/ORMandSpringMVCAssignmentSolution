@@ -9,35 +9,41 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-	<title>Great Learning Student List</title>
+	<title>Customer Relationship Management</title>
 </head>
 
 <body>
 
 <div class="container">
 	<br/>
-	<h3>Student List of Great Learning Backend Course</h3>
+	<div class="bg-success py-5">
+		<h3 class="text-center text-white">Customer Relationship Management</h3>
+	
+	</div>
+	
 	<hr>
 	
-	<table class="table table-bordered table-striped">
-		<thead class="thead-dark">
+	<!-- Add a button -->
+	<a th:href="@{/showFormForAdd}"
+		class="btn btn-primary btn-sm mb-3">
+		Add Customer
+	</a>
+	
+	<table class="table table-bordered table-striped text-center">
+		<thead class="thead-light">
 			<tr>
-				<th>Student ID</th>
-				<th>Full Name</th>
+				<th>First Name</th>
+				<th>Last Name</th>
 				<th>Email ID</th>
-				<th>Department</th>
-				<th>Country</th>
 				<th>Action</th>
 			</tr>
 		</thead>
 		
 		<tbody>
 			<tr th:each="tempEmployee : ${students}">
-				<td th:text="${tempEmployee.id}" />
-				<td th:text="${tempEmployee.firstName}+' '+ ${tempEmployee.lastName}" />
-				<td th:text="${tempEmployee.email}" />	
-				<td th:text="${tempEmployee.department}" />	
-				<td th:text="${tempEmployee.country}" />	
+				<td th:text="${tempEmployee.firstName}" />
+				<td th:text=" ${tempEmployee.lastName}" />
+				<td th:text="${tempEmployee.email}" />		
 				
 				<td>
 					<!-- Add "update" button/link -->
@@ -59,11 +65,7 @@
 			</tr>
 		</tbody>		
 	</table>
-		<!-- Add a button -->
-	<a th:href="@{/showFormForAdd}"
-		class="btn btn-primary btn-sm mb-3">
-		Add Student
-	</a>
+		
 	
 </div>
 	

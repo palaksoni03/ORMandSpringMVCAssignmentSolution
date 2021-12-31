@@ -16,10 +16,15 @@
 
 	<div class="container">
 	
-		<h3>Employee Directory</h3>
+		<br/>
+		<div class="bg-success py-5">
+			<h3 class="text-center text-white">Customer Relationship Management</h3>
+		
+		</div>
+		
 		<hr>
 		
-		<p class="h4 mb-4">Save Employee</p>
+		<p class="h4 mb-4">Save Customer</p>
 
 		<form action="#" th:action="@{/updateVal}"
 						 th:object="${students}" method="POST">
@@ -36,13 +41,7 @@
 
 			<input type="text" th:field="*{email}"
 					class="form-control mb-4 col-4" name = "email= *{email}" >
-					
-			<input type="text" th:field="*{department}"
-					class="form-control mb-4 col-4" name = "department= *{department}" >
-					
-			<input type="text" th:field="*{country}"
-					class="form-control mb-4 col-4" name = "country= *{country}" >
-				
+							
 				
 			<button type="submit" class="btn btn-info col-2">Update</button>
 						
@@ -51,7 +50,7 @@
 			</tr>
 			
 		<hr>
-		<a th:href="@{/Student}">Back to Student List</a>
+		<a th:href="@{/customer}">Back to Customer List</a>
 		
 	</div>
 </body>

@@ -54,13 +54,11 @@ public class Student {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Student(String firstName, String lastName, String email, String department, String country) {
+	public Student(String firstName, String lastName, String email) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
-		this.department = department;
-		this.country = country;
 	}
 
 	public int getId() {
