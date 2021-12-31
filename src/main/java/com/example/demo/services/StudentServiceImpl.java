@@ -68,9 +68,7 @@ public class StudentServiceImpl implements StudentService {
 	@Override
 	public void updateCustomer(Student student) {
 
-		studentInterface.save(student);
-
-		
+		studentInterface.save(student);	
 		
 	}
 }
